@@ -7,7 +7,18 @@ function Menu({ setMenu }) {
   return (
     <div className='flex-col'>
 
-      <div className='p-3'>
+      <div className='bg-black p-3 justify-center flex'>
+        <input 
+            type="text" 
+            name="name" 
+            placeholder="Search..."
+            className='h-8 w-80 pl-2 text-black outline-0 rounded-lg'
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          /> 
+      </div>
+
+      <div className='p-3 flex justify-center'>
         <button
           onClick={() => setMenu(true)}
         >
@@ -16,8 +27,8 @@ function Menu({ setMenu }) {
       </div>
 
       <hr className="border-t-[0.1px] border-[#9ea6af]" />
-    
-      <div className='p-3'>
+     
+      <div className='p-3 flex justify-center'>
         <button
           onClick={() => setMenu(true)}
         >
@@ -27,7 +38,7 @@ function Menu({ setMenu }) {
 
       <hr className="border-t-[0.1px] border-[#9ea6af]" />
 
-      <div className='p-3'>
+      <div className='p-3 flex justify-center'>
         <button
           onClick={() => setMenu(true)}
         >

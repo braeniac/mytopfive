@@ -63,7 +63,7 @@ function Topbar({ menu, setMenu }) {
         </button>
       </div> 
 
-      <div className='md:hidden mr-10'>
+      <div className='md:hidden mr-8'>
         <button
           onClick={() => !menu ? setMenu(true) : setMenu(false)}
         >
