@@ -4,13 +4,12 @@ import {
   MagnifyingGlassIcon
 } from '@heroicons/react/24/outline';
 
-import Menu from '../components/Menu'; 
+import { XMarkIcon } from '@heroicons/react/24/solid';
 
-function Topbar() {
+function Topbar({ menu, setMenu }) {
 
   const [search, setSearch] = useState(''); 
   const [toggle, setToggle] = useState(false); 
-  const [menu, setMenu] = useState(false); 
 
   return (
     <div className='flex justify-between bg-black text-white h-16 items-center'>
@@ -68,7 +67,7 @@ function Topbar() {
         <button
           onClick={() => !menu ? setMenu(true) : setMenu(false)}
         >
-          <Bars3Icon className='h-6 w-6'/>
+          { menu ? <Bars3Icon className='h-6 w-6'/> : <XMarkIcon className='h-6 w-6'/> }
         </button>
       </div>   
 
