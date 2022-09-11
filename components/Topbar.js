@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router'; 
 import { 
   Bars3Icon,
   MagnifyingGlassIcon
@@ -10,11 +11,17 @@ function Topbar({ menu, setMenu }) {
 
   const [search, setSearch] = useState(''); 
   const [toggle, setToggle] = useState(false); 
+  const router = useRouter(); 
 
   return (
     <div className='flex justify-between bg-black text-white h-16 items-center'>
 
-      <button className='flex space-x-3 ml-10'>
+      <button 
+        className='flex space-x-3 ml-10'
+        onClick={() => {
+          router.push('/');
+        }}  
+      >
         <div>
           LOGO
         </div>
@@ -32,7 +39,7 @@ function Topbar({ menu, setMenu }) {
             type="text" 
             name="name" 
             placeholder="Search..."
-            className='h-8 w-96 pl-2 text-black outline-0 rounded-lg'
+            className='h-8 w-96 pl-2 text-black outline-0 rounded-lg '
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           /> 
@@ -48,17 +55,25 @@ function Topbar({ menu, setMenu }) {
         <button 
           className='bg-blue-500 px-3 py-1 rounded-md hover:bg-blue-400'
           onClick={() => {
-            
+            router.push('/Template'); 
           }}
         >
           <p>Make a Template</p>
         </button>
 
-        <button>
+        <button
+          onClick={() => {
+            router.push('/Categories');
+          }}
+        >
           <p>Categories</p>
         </button>
 
-        <button>
+        <button
+          onClick={() => {
+            router.push('/Login');
+          }}
+        >
           <p>Login</p>
         </button>
       </div> 
