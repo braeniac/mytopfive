@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
+import { useRouter } from 'next/router'; 
 
 function Menu({ setMenu }) {
 
   const [search, setSearch] = useState('');
+  const router = useRouter(); 
 
   return (
     <div className='flex-col'>
@@ -20,7 +22,12 @@ function Menu({ setMenu }) {
 
       <div className='p-3 flex justify-center'>
         <button
-          onClick={() => setMenu(true)}
+          onClick={() => {
+            setMenu(true)
+            router.push('/Template'); 
+            
+          }}
+
         >
           <p>Make Your Own Template</p>
         </button>
@@ -30,7 +37,10 @@ function Menu({ setMenu }) {
      
       <div className='p-3 flex justify-center'>
         <button
-          onClick={() => setMenu(true)}
+          onClick={() => {
+            setMenu(true)
+            router.push('/Categories'); 
+          }}
         >
           <p>Categories</p>
         </button>
@@ -40,7 +50,10 @@ function Menu({ setMenu }) {
 
       <div className='p-3 flex justify-center'>
         <button
-          onClick={() => setMenu(true)}
+          onClick={() => {
+            setMenu(true)
+            router.push('/Login');
+          }}
         >
           <p>Login</p>
         </button>

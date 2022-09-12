@@ -30,7 +30,6 @@ function Topbar({ menu, setMenu }) {
         </div>     
       </button>
 
-
       <div className='space-x-5 hidden md:flex mr-10 items-center'>
 
         {
@@ -53,7 +52,7 @@ function Topbar({ menu, setMenu }) {
         </button>
 
         <button 
-          className='bg-blue-500 px-3 py-1 rounded-md hover:bg-blue-400'
+          className='bg-green-500 px-3 py-1 rounded-md hover:bg-green-400'
           onClick={() => {
             router.push('/Template'); 
           }}

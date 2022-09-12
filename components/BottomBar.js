@@ -4,7 +4,7 @@ import { FireIcon } from '@heroicons/react/24/solid'
 function BottomBar() {
   return (
     <>
-      <div className='flex justify-center items-end space-x-1'>
+      <div className='flex justify-center items-end space-x-1 mb-10 text-sm'>
         <FireIcon className='h-6 w-6'/>
         <div>
           <p>2022 mytopfive.ca |</p>  

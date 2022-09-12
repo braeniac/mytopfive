@@ -16,11 +16,11 @@ function Layout({ children  }) {
           menu ? null : <Menu setMenu={setMenu}/>
         }
         
-        <main>
+        <div>
             { children }
-        </main>
+        </div>
 
-        <BottomBar />
+        {/* <BottomBar /> */}
     </>
   )
 }
