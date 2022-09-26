@@ -24,7 +24,7 @@ function Template() {
           <button 
             className='bg-green-500 px-7 py-2 rounded-md hover:bg-green-400'
               onClick={() => {
-                router.push('/Create'); 
+                router.push('/create/NewTemplate'); 
             }}
           >
             <p>Make Your Own Template</p>
